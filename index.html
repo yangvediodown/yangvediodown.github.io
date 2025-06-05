@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>央视网视频下载器 - 免费高清视频解析下载工具</title>
+    <meta name="description" content="央视网视频下载器是专为下载央视网视频设计的软件，具备强大的视频解析和下载功能，用户只需简单复制央视网视频链接，即可轻松解析并下载高清视频，支持多种视频格式和分辨率选择，下载过程稳定且快速，还能边看边下，提高视频获取效率。">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        :root {
+            --primary-color: #E91E63; 
+            --secondary-color: #f8f9fa; /* Light grey */
+            --accent-color: #EC407A; /* 浅红色，用于悬停效果 */
+        }
+        .hero-section {
+            /* TODO: Replace with a relevant background image for MyComic */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://pic1.imgdb.cn/item/67c0250dd0e0a243d40719a1.jpg'); /* Placeholder, replace with MyComic theme image */
+            background-position: center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        .testimonial-card {
+            border-left: 4px solid var(--primary-color);
+        }
+        .download-section {
+            background-color: var(--secondary-color);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        .btn-outline-light:hover {
+            color: var(--primary-color);
+        }
+        .feature-box {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .anime-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background-color: rgba(138, 43, 226, 0.1); /* Adjusted for new primary color */
+            color: var(--primary-color);
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+            border: 1px solid var(--primary-color);
+        }
+        .usage-tips-section {
+            background-color: #F0E6FA; /* Light purple background */
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--primary-color);
+        }
+        .usage-tips-section h5 {
+            color: var(--primary-color);
+        }
+        .usage-tips-section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .usage-tips-section ul li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .usage-tips-section ul li i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">央视网视频下载器</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">软件介绍</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">软件特色</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#usage-tips">使用说明</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#download">立即下载</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">央视网视频下载器 - 高清视频一键获取</h1>
+            <p class="lead mb-5">专为下载央视网视频设计的强大工具<br>多种视频格式和分辨率选择，稳定快速的下载体验</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#download" class="btn btn-primary btn-lg px-4 py-2">立即下载</a>
+                <a href="#features" class="btn btn-outline-light btn-lg px-4 py-2">查看特色功能</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <!-- 央视网视频下载器截图 -->
+                    <img src="https://www.haitangw.cc/wp-content/uploads/2024/10/2024092903553727.png" alt="央视网视频下载器界面预览" class="img-fluid rounded shadow-lg">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">央视网视频下载器介绍</h2>
+                    <p class="lead">央视网视频下载器是专为下载央视网视频设计的软件，具备强大的视频解析和下载功能。</p>
+                    <p class="mb-4">用户只需简单复制央视网视频的链接，粘贴到下载器中，即可轻松解析并下载高清视频，这款软件支持多种视频格式和分辨率的选择，下载过程稳定且快速，还能边看边下，提高了视频获取的效率。</p>
+
+                    <div class="mb-4">
+                        <h5 class="fw-bold mb-3">核心优势</h5>
+                        <span class="anime-badge">强大解析功能</span>
+                        <span class="anime-badge">多格式支持</span>
+                        <span class="anime-badge">多分辨率选择</span>
+                        <span class="anime-badge">稳定快速下载</span>
+                        <span class="anime-badge">边看边下</span>
+                        <span class="anime-badge">高效便捷</span>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-link text-success me-2"></i>
+                        <span>简单复制央视网视频链接，一键解析下载</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-film text-success me-2"></i>
+                        <span>支持多种视频格式和分辨率选择，满足不同需求</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-tachometer-alt text-success me-2"></i>
+                        <span>下载过程稳定且快速，提高视频获取效率</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-play text-success me-2"></i>
+                        <span>边看边下功能，提前预览视频内容</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">软件特色</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card feature-box border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-film feature-icon"></i>
+                                <h4 class="card-title fw-bold">多清晰度选择</h4>
+                            </div>
+                            <p class="card-text">央视网视频下载器支持多种视频清晰度选择，从标清到超清，满足不同用户的需求，让您根据网络环境和存储空间灵活选择。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-box border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-play-circle feature-icon"></i>
+                                <h4 class="card-title fw-bold">先播放看效果</h4>
+                            </div>
+                            <p class="card-text">下载前可以先预览视频内容，确认是否是您需要的视频，避免下载错误内容，节省时间和空间。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card feature-box border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-download feature-icon"></i>
+                                <h4 class="card-title fw-bold">满意后一键下载</h4>
+                            </div>
+                            <p class="card-text">预览满意后，只需一键即可开始下载，操作简单便捷，无需复杂设置，适合各类用户使用。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card feature-box border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-folder-open feature-icon"></i>
+                                <h4 class="card-title fw-bold">自定义保存位置</h4>
+                            </div>
+                            <p class="card-text">可自定义选择视频保存位置，一键打开下载位置，方便管理和查找已下载的视频文件。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card feature-box border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="text-center mb-4">
+                                <i class="fas fa-sync feature-icon"></i>
+                                <h4 class="card-title fw-bold">边看边下载</h4>
+                            </div>
+                            <p class="card-text">支持边看边下载功能，无需等待下载完成即可开始观看视频，提高视频获取和观看的效率。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage-tips" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">使用说明</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="usage-tips-section">
+                        <p class="text-center mb-3"><strong>央视网视频下载器使用步骤：</strong></p>
+                        <div class="row">
+                            <div class="col-12">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i>复制央视网视频链接</li>
+                                    <li><i class="fas fa-check-circle"></i>粘贴到下载器中</li>
+                                    <li><i class="fas fa-check-circle"></i>选择视频格式和分辨率</li>
+                                    <li><i class="fas fa-check-circle"></i>预览视频效果</li>
+                                    <li><i class="fas fa-check-circle"></i>选择保存位置</li>
+                                    <li><i class="fas fa-check-circle"></i>点击下载按钮</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="text-center mt-3">央视网视频下载器为视频爱好者提供了简单、高效的视频获取工具，让您轻松下载并保存喜爱的央视网视频内容！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download-section py-5">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4">立即下载 央视网视频下载器 v5.1-免费终结版</h2>
+            <p class="lead mb-5">专业高效的央视网视频下载工具<br>多种格式支持，稳定快速，边看边下</p>
+            <!-- TODO: Update download links and official website URL -->
+            <a href="https://pan.quark.cn/s/89d464f78fb2" class="btn btn-primary btn-lg px-5 py-3 me-3 mb-3"><i class="fas fa-download me-2"></i>下载软件</a>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 央视网视频下载器. All Rights Reserved.</p>
+            <p class="small text-muted mt-1">本站仅提供应用介绍和信息分享，下载资源及链接来自互联网，版权归原作者所有。如有侵权，请联系我们删除。</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
